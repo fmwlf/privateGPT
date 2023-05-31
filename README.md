@@ -1,20 +1,21 @@
 # privateGPT(离线版PDF文档沟通助手)
 Ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection!
-
+》》》在没有互联网连接的情况下，使用LLM的力量对您的文档提出问题。 100%私有，任何时候都没有数据离开您的执行环境。您可以在没有互联网连接的情况下摄取文档和提问！
 Built with [LangChain](https://github.com/hwchase17/langchain), [GPT4All](https://github.com/nomic-ai/gpt4all), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
-
+》》》内置LangChain，GPT4All，LlamaCpp，Chroma和SentenceTransformers。
 <img width="902" alt="demo" src="https://user-images.githubusercontent.com/721666/236942256-985801c9-25b9-48ef-80be-3acbb4575164.png">
 
 # Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
-
+》》》为了设置您的环境以运行此处的代码，请首先安装所有要求：
 ```shell
 pip3 install -r requirements.txt
 ```
 
 Then, download the LLM model and place it in a directory of your choice:
+》》》为了设置您的环境以运行此处的代码，请首先安装所有要求：
 - LLM: default to [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
-
+》》》LLM：默认为 ggml-gpt4all-j-v1.3-groovy.bin .如果您更喜欢不同的 GPT4All-J 兼容型号，只需下载它并在您的 .env 文件中引用它。
 Rename `example.env` to `.env` and edit the variables appropriately.
 ```
 MODEL_TYPE: supports LlamaCpp or GPT4All
@@ -26,14 +27,14 @@ TARGET_SOURCE_CHUNKS: The amount of chunks (sources) that will be used to answer
 ```
 
 Note: because of the way `langchain` loads the `SentenceTransformers` embeddings, the first time you run the script it will require internet connection to download the embeddings model itself.
-
+》》》注意：由于 langchain 加载 SentenceTransformers 嵌入的方式，首次运行脚本时，需要互联网连接才能下载嵌入模型本身。
 ## Test dataset
 This repo uses a [state of the union transcript](https://github.com/imartinez/privateGPT/blob/main/source_documents/state_of_the_union.txt) as an example.
 
 ## Instructions for ingesting your own dataset
-
+》》》引入自己的数据集的说明
 Put any and all your files into the `source_documents` directory
-
+》》》将任何和所有文件放入 source_documents 目录
 The supported extensions are:
 
    - `.csv`: CSV,
